@@ -1,0 +1,40 @@
+body {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    padding-top: 79px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+}
+h1 {
+    font-size: 55px;
+}
+h2 {
+    font-size: 40px;
+}
+h3 {
+    font-size: 25px;
+}
+h4 {
+    font-size: 16px;
+}
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+@import 'reset';
+@import 'vars';
+@import 'header';
+@import 'btn';
+@import 'slider';
+@import 'card';
+@import 'products';
+@import 'footer';
+
+@import 'mediaqueries';
+
+p {
+    color: $grey-85;
+}

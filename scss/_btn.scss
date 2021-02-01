@@ -1,0 +1,23 @@
+.btn {
+    color: $white;
+
+}
+.btn-blue {
+    background-color: $blue;
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: .2s;
+    &:hover {
+        background-color: darken($blue, 5%);
+    }
+    > :first-child {
+        margin-right: 10px;
+    }
+}
+.label-green {
+    border-radius: 5px;
+    background-color: $green;
+    color: $white;
+    padding: 5px 12px;
+    font-size: 12px;
+}

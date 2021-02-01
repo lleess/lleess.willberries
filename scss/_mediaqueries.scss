@@ -1,0 +1,141 @@
+.btn-burger {
+    width: 60px;
+    height: 40px;
+    display: none;
+}
+.burger__wrapper {
+    margin: 0 auto;
+    width: 50%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: $grey-50;
+    position: relative;
+    z-index: 2;
+    &:before, &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+        background-color: $grey-50;
+        position: absolute;
+    }
+    &:before {
+        top: -8px;
+    }
+    &:after {
+        bottom: -8px;
+    }
+}
+.burger__menu {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    bottom: 0;
+    background-color: $white;
+    padding: 30px;
+    box-shadow: 7px 30px 15px $grey-50;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: .3s;
+    &.active {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1150px) {
+    .header, .cards, .products__panel, .products, .footer__line {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 950px) {
+    body {
+        padding-top: 70px;
+    }
+    .header {
+        grid-template-areas: 'logo cart navig';
+    }
+    .header__nav {
+        display: none;
+    }
+    .btn-burger {
+        display: block;
+    }
+    .footer__nav-list, .pay__list {
+       justify-content: center;
+    }
+    .footer__line > *{
+        width: 100%;
+        justify-content: center;
+    }
+    .pay__list {
+        margin-bottom: 10px;
+    } 
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .offer__slide {
+        height: 400px;
+    }
+    .cards {
+        grid-template-columns:  1fr;
+        grid-template-areas: "card1"
+                             "card2"
+                             "card3"
+                             "card4";
+    }
+    .card__inner {
+        width: 100%;
+    }
+    .products {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 540px) {
+    body {
+        padding-top: 50px;
+    }
+    .header {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .logo__img {
+        width: 70px;
+    }
+    .header__cart {
+        font-size: 14px;
+        &.btn-blue {
+            padding: 5px 10px;
+        }
+    }
+    .icon-cart {
+        width: 10px;
+    }
+    .burger__menu {
+        top: 50px;
+    }
+    .slide__content {
+        margin-left: 70px;
+        max-width: 80%;
+    }
+    .offer__slider-prev, .offer__slider-next {
+        img {
+            width: 30px;
+        }
+    }
+    .footer__nav-item {
+        margin-bottom: 10px;
+    }
+}
